@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-18 13:52:39 / 修改时间：13:53:51" itemprop="dateCreated datePublished" datetime="2020-03-18T13:52:39+08:00">2020-03-18</time>
+              <time title="创建时间：2020-03-18 13:52:39 / 修改时间：14:01:36" itemprop="dateCreated datePublished" datetime="2020-03-18T13:52:39+08:00">2020-03-18</time>
             </span>
 
           
@@ -188,7 +188,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="阿里云搭建V2ray"><a href="#阿里云搭建V2ray" class="headerlink" title="阿里云搭建V2ray"></a>阿里云搭建V2ray</h3>
+          <h3 id="阿里云搭建V2ray"><a href="#阿里云搭建V2ray" class="headerlink" title="阿里云搭建V2ray"></a>阿里云搭建V2ray</h3><p>首先去阿里云购买轻量服务器，这里推荐阿里轻量云HK就可以了。</p>
+<p>购买后需要净化阿里云系统，如果不净化，阿里云自带监控，监控你的服务器，有可能会把服务器发出警告，然后封锁。</p>
+<p>净化系统命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -sSL https://raw.githubusercontent.com/MeowLove/AlibabaCloud-CentOS7-Pure-and-safe/master/download/kill/New_installation.sh | sudo bash</span><br></pre></td></tr></table></figure>
+
+<p>github地址：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">https://github.com/MeowLove/AlibabaCloud-CentOS7-Pure-and-safe</span></span><br></pre></td></tr></table></figure>
+
+<p>一健安装V2ray</p>
+<figure class="highlight bash"><figcaption><span><(curl -s -L</span><a href="https://git.io/v2ray.sh)" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://git.io/v2ray.sh)</span><br></pre></td></tr></table></figure>
+
+<p>BBR加速器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+
+<p>linux端口命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">查看已开放端口：</span><br><span class="line">    firewall-cmd --list-ports</span><br><span class="line"></span><br><span class="line">永久开发端口：</span><br><span class="line">    firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br><span class="line">    iptables -A INPUT -p tcp --dport 8848 -j ACCEPT</span><br><span class="line">    </span><br><span class="line">重启防火墙：</span><br><span class="line">    systemctl restart firewalld</span><br><span class="line">    </span><br><span class="line">查看所有端口</span><br><span class="line">    netstat -nltp</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
