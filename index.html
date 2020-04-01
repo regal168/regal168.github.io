@@ -169,6 +169,90 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/19/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="陈威君">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈威君">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/19/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/" class="post-title-link" itemprop="url">小程序开发</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-19 09:09:30 / 修改时间：11:11:49" itemprop="dateCreated datePublished" datetime="2020-03-19T09:09:30+08:00">2020-03-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1、入门概述"><a href="#1、入门概述" class="headerlink" title="1、入门概述"></a>1、入门概述</h2><h4 id="1-1、Redis是什么"><a href="#1-1、Redis是什么" class="headerlink" title="1.1、Redis是什么"></a>1.1、Redis是什么</h4><p>&nbsp;&nbsp;     REmote DIctionary Server(远程字典服务)</p>
+<p>&nbsp;&nbsp;    是完全开源免费的，用C语言编写的，遵守BSD协议，是一个<strong>高性能的(key/value)分布式内存数据库</strong>，基于内存运行，并<strong>支持持久化</strong>的NoSql数据库，是当前最热门的NoSql数据库之一，也被人们称为<strong>数据结构服务器</strong>。</p>
+<p>Redis与其他key-value缓存产品有以下三个特点</p>
+<pre><code>- Redis支持数据的持久化，可以将内存的数据保存到硬盘中，重启的时候可以再次加载进行使用。
+
+- Redis不仅仅支持简单的key-value类型的数据，同时还提供list，zset，set，hash，String等数据结构存储。</code></pre><ul>
+<li>Redis还支持数据备份，既master-slave模式的数据备份。</li>
+</ul>
+<h4 id="1-2、能干什么"><a href="#1-2、能干什么" class="headerlink" title="1.2、能干什么"></a>1.2、能干什么</h4><pre><code>- 内存存储和持久化：redis支持异步将内存上的数据写入到硬盘上，同时不影响继续服务。
+- 取最新N个数据的操作：如：可以将最新的10条评论ID放在Redis的List集合里面。
+- 模拟类似HTTPSession这种需要设定时间的功能
+- 发布、定义消息系统
+- 定时器、计数器</code></pre><h4 id="1-3、去哪里下"><a href="#1-3、去哪里下" class="headerlink" title="1.3、去哪里下"></a>1.3、去哪里下</h4><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://redis.io</span></span><br><span class="line"><span class="attribute">http://www.redis.cn</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="1-4、能干什么"><a href="#1-4、能干什么" class="headerlink" title="1.4、能干什么"></a>1.4、能干什么</h4><pre><code>- 数据类型、基本操作和配置
+- 持久化和复制，RDB/AOF
+- 事务的控制
+- 复制
+- 。。。</code></pre><h3 id="2、Redis知识讲解"><a href="#2、Redis知识讲解" class="headerlink" title="2、Redis知识讲解"></a>2、Redis知识讲解</h3><p>​        2.1、单进程</p>
+<ul>
+<li><p>单进程模型来处理客户端请求，对读写事件的响应，是通过对epoll函数的包装来做到。Redis的实际处理速度完全依靠主进程的执行效率。</p>
+</li>
+<li><p>Epoll是Linux内核为处理大批量文件描述而作了改进的Epoll，是Linux下多路复用IO接口select/pall的增强版本，它能显著提高程序在大量并发连接中只有少量活跃的请情况下的系统CPU利用率</p>
+<p>2.2、默认16个数据库，类似数组下表从零开始，初始默认使用0号库</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/18/V2ray/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -309,7 +393,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
